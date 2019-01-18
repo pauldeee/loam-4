@@ -1,0 +1,14 @@
+<launch>
+
+  <!-- <arg name="rviz" default="true" /> -->
+
+  <node pkg="loam" type="scanRegistration" name="scanRegistration" output="screen"/>
+  <node pkg="loam" type="laserOdometry" name="laserOdometry" output="screen"/>
+  <node pkg="loam" type="laserMapping" name="laserMapping" output="screen"/>
+  <node pkg="loam" type="transformMaintenance" name="transformMaintenance" output="screen"/>
+
+<!--   <group if="$(arg rviz)">
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find loam)/loam.rviz"/>
+  </group> -->
+
+</launch>
